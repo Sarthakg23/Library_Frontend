@@ -1,0 +1,13 @@
+<app-nav-bar-user></app-nav-bar-user>
+<div class="container">
+    <div *ngFor="let list of lists" class="card" >
+        <img src="{{list.B_IMAGE}}">
+        <p>Book ID : {{list.ID}}</p>
+        <p>{{list.TITLE}}</p>
+        <p>{{list.AUTHOR}},{{list.PUBLISHER}} </p>
+        <p>Language : ${{list.LANG}}</p>
+        <div *ngIf="list.AVAILABLE_COPIES>0">
+            <button  style="width: 200px;" routerLink=""  >Request to Issue</button>
+        </div>       
+    </div>
+</div>
