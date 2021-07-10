@@ -12,6 +12,8 @@ import { FormsModule } from '@angular/forms';
 import { BookUserComponent } from './book-user/book-user.component';
 import { BookAdminComponent } from './book-admin/book-admin.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FilterPipe } from './pipes/filter.pipe';
+import { SortPipe } from './pipes/sort.pipe';
 
 
 @NgModule({
@@ -23,6 +25,8 @@ import { HttpClientModule } from '@angular/common/http';
     SignUpComponent,
     BookUserComponent,
     BookAdminComponent,
+    FilterPipe,
+    SortPipe,
   ],
   imports: [
     BrowserModule,

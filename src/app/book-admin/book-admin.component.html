@@ -2,6 +2,7 @@
 <!-- <div class="form-group">
     <input type="text" class="form-control" placeholder="Search by title"
 </div> -->
+
 <html>
     <head>
         <title>Hotel Management System</title>
@@ -9,22 +10,40 @@
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" ></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
-        <link rel="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
-
-        <div class="container" >
-            <div *ngFor="let list of lists " class="card" >
+        <div class="search-container">
+            <form action="/action_page.php">
+              <input type="text" placeholder="Search By Title" [(ngModel)]='Title' name="search">
+              <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+          </div>
+        <!-- <div class="containing">
+            <label>Filter by Title - </label>
+           
+            <input [(ngModel)]='Title' placeholder="Enter Title" > -->
+            <!-- <label>Filter by Genre - </label>
+            <input [(ngModel)]='Genre' placeholder="Enter Genre" >
+            <label>Filter by Language - </label>
+            <input [(ngModel)]='Language' placeholder="Enter Language"> -->
+        <!-- </div> -->
+       
+        <div class="container" >      
+                             <!--  |filter:Genre:'GENERE'|filter:Language:'LANG'-->
+            <div *ngFor="let list of lists|filter:Title:'TITLE'" class="card" >
                 <img src="{{list.B_IMAGE}}">      
                 <p style="font-size: normal;"><b style="font-size: 30px;">{{list.TITLE}}</b>
                 <br>
                 <i style="font-size: small;">By: {{list.AUTHOR}},{{list.PUBLISHER}} ({{list.LANG}})</i>
                 <br>
                 <br>
-                <i>"YOP: {{list.YOP.substring(0,10)}}"</i>
+                <!-- <i>"Rack No.: {{list.YOP.substring(0,10)}}"</i> -->
+                <i>Rack no. : <input #rn type="text" value="{{list.RACK_NO}}" name="Rack_no"  style="width:15px; border: none;" ></i>
+                <button  class="btn btn-primary" (click)="updateBook(list.ID,rn.value)">Update Rack</button>
                 <br><br>
                 
-                <button class="hover" style="padding-bottom: 5px; padding-right: 1px; background-color: white; border: none; font-size: 20px;" (click)="addCopy(list.ID)"><b>+</b></button>
+                <button  style="padding-bottom: 5px; padding-right: 1px; background-color: white; border: none; font-size: 20px;" (click)="addCopy(list.ID)"><b>+</b></button>
                 <button  style="padding-bottom: 5px; padding: 5px 10px; background-color: white; border: none;">|          {{list.TOTAL_COPIES}}        |</button>
                 <button  style="padding-bottom: 5px; padding-left: 1PX; background-color: white; border: none;font-size: 20px;" (click)="deleteCopy(list.ID)"><b>-</b></button>
                 

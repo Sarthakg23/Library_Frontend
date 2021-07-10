@@ -5,7 +5,17 @@
     padding: 20px 20px;
     border: solid linear-gradient(to right,#ff9482,#7d77ff);
     border-radius: 10px;
+    width: 100%;
   }
+  .Name 
+  {display: inline-block; width:49%;}
+
+.Name .cf-medium 
+{width:130%;}
+
+.Name label 
+{display: block !important; width: 150% !important;}
+
   
   .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
@@ -14,9 +24,9 @@
   .container {
     display: grid;
     grid-template-rows: auto auto auto;
-    grid-template-columns: auto auto auto;
     grid-row-gap: 20px; 
     grid-column-gap: 20px;
+    width: 60%;
   }
   
  button{
@@ -29,7 +39,7 @@
 
   .card  img{
     object-fit: cover;
-    width: 300px;
+    width: 200px;
     height: 200px;
     float: left;
     transition: 0.5s;
@@ -52,4 +62,27 @@
     transform: translateY(-2px);
     transition: 0.5s;
   }
- 
+ .containing{
+   text-align: center;
+   padding-bottom: 10px;
+ }
+ .containing input{
+   width: 150px;
+  border-radius: 2PX;
+ }
+ .containing label{
+   padding: 10px;
+ }
+ .search-container{
+   text-align: center;
+   padding: 10px;
+ }
+ .search-container button{
+  border: solid #7d77ff;
+  
+ }
+ .search-container input{
+   border-radius: 5px;
+   border: solid 0.2px;
+   background-color: linear-gradient(to right,#ff9482,#7d77ff);
+ }

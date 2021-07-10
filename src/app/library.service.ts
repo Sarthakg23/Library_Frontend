@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http'
-import { ThisReceiver } from '@angular/compiler';
+
 
 @Injectable({
   providedIn: 'root'
@@ -24,7 +24,10 @@ export class LibraryService {
   deleteCopy(book_id:any){
     return this.http.post('https://localhost:44373/api/DeleteCopy',book_id);
   }
-  deleteBook(book:any){
-    return this.http.delete('https://localhost:44373/api/DeleteBook',book);
+  deleteBook(book_id:any){
+    return this.http.delete('https://localhost:44373/api/DeleteBook/'+book_id);
+  }
+  updateBook(book_id:any){
+    return this.http.put('https://localhost:44373/api/UpdateBook',book_id);
   }
 }
