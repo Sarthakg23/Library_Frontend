@@ -76,6 +76,7 @@
  .search-container{
    text-align: center;
    padding: 10px;
+   position: relative;
  }
  .search-container button{
   border: solid #7d77ff;
@@ -85,4 +86,13 @@
    border-radius: 5px;
    border: solid 0.2px;
    background-color: linear-gradient(to right,#ff9482,#7d77ff);
+   text-indent: 30px;
  }
+.search-container .fa-search { 
+  position: absolute;
+  
+  top: 15px;
+  left: 545px;
+  font-size: 15px;
+  
+}
