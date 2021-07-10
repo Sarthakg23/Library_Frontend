@@ -5,7 +5,7 @@
     <body>
         <div class="center">
             <h1 style="font-size: large;">Welcome back!</h1>
-            <form #signin="ngForm" >
+            <form #signin="ngForm" (ngSubmit)="onSubmit(signin)" >
                 <div class="txt_field">
                     <input type="text" name="useremail" ngModel email required #useremail="ngModel"> <br>
                     <label>Email Address</label>

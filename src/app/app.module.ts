@@ -22,7 +22,7 @@ import { HttpClientModule } from '@angular/common/http';
     SignInComponent,
     SignUpComponent,
     BookUserComponent,
-    BookAdminComponent
+    BookAdminComponent,
   ],
   imports: [
     BrowserModule,
