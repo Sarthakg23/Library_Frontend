@@ -1,0 +1,83 @@
+<html>
+    <meta charset="utf-8">
+    <title>Add Book form</title>
+    <body>
+        <div class="center">
+            <h1 style="font-size: large;">Start Now!</h1>
+            <form #addBook="ngForm" (ngSubmit)="onSubmit(addBook.value)" >
+                <div class="txt_field">
+                    <input type="text" name="title" ngModel required #title="ngModel"> <br>
+                    <label>Book Title</label>
+                    <small [style.color]="title.touched && !title.valid ? 'red':'rgb(6, 252, 47)'">*Enter valid Title</small> <br>                       
+                </div>
+                <div class="txt_field">
+                    <input type="text" name="author" ngModel required #author="ngModel"> <br>
+                    <label>Author Name</label>
+                    <small [style.color]="author.touched && !author.valid ? 'red':'rgb(6, 252, 47)'">*Enter valid Author</small> <br>                       
+                </div>
+                <div class="txt_field">
+                    <input type="text" name="publisher" ngModel required  #publisher="ngModel"> <br>
+                    <label>Publisher</label>
+                    <small [style.color]="publisher.touched && !publisher.valid ? 'red':'rgb(6, 252, 47)'">*Enter valid Publisher</small> <br>            
+                </div>
+                <div class="txt_field">
+                    <input type="number" name="isbn" ngModel required #isbn="ngModel"> <br>
+                    <label>ISBN Number</label>                    
+                    <small [style.color]="isbn.touched && !isbn.valid ? 'red':'rgb(6, 252, 47)'">*Enter Valid ISBN Number</small> <br>                       
+                </div>
+                <div class="txt_field">
+                    <input type="text" name="genere" ngModel required #genere="ngModel"> <br>
+                    <label>Book Genere</label>
+                    <small [style.color]="genere.touched && !genere.valid ? 'red':'rgb(6, 252, 47)'">*Enter Valid Genere</small> <br>                       
+                </div>
+                <div class="txt_field">
+                    <input type="number" name="rackno" ngModel required #rackno="ngModel"> <br>
+                    <label>Book Rack No.</label>
+                    <small [style.color]="rackno.touched && !rackno.valid ? 'red':'rgb(6, 252, 47)'">*Enter valid Rack No.</small> <br>                       
+                </div>
+                <div class="txt_field">
+                    <input type="text" name="lang" ngModel  required #lang="ngModel"> <br>
+                    <label>Language</label>
+                    <small [style.color]="lang.touched && !lang.valid ? 'red':'rgb(6, 252, 47)'">*Enter valid Language</small> <br>                       
+                </div>
+                <div class="txt_field">
+                    <input type="number" name="copies" ngModel min="1" required #copies="ngModel"> <br>
+                    <label>Copies</label>
+                    <small [style.color]="copies.touched && !copies.valid ? 'red':'rgb(6, 252, 47)'">*Enter valid Copies</small> <br>                       
+                </div>
+                <div class="txt_field">
+                    <input type="date" name="yop" ngModel required #yop="ngModel"> <br>
+                    <label>Email Year Of Publishing</label>
+                    <small [style.color]="yop.touched && !yop.valid ? 'red':'rgb(6, 252, 47)'">*Enter valid YOP</small> <br>                       
+                </div>
+                <div class="text-field">
+                    <label>Choose Book Image</label>
+                    <input class="form-control"  required type="file" 
+                            (change)="onChange($event)" accept="image/*">
+                  
+                    <button (click)="onUpload()" 
+                        class="btn btn-success">
+                        Upload
+                    </button>
+                </div>
+                  
+                <div class="text-field">
+                    <label>Choose Book PDF</label>
+                    <input class="form-control"  type="file" 
+                            (change)="onChange2($event)" accept=".pdf">
+                  
+                    <button (click)="onUpload2()" 
+                        class="btn btn-success">
+                        Upload
+                    </button>
+                </div>
+                <div class="container" *ngIf="loading">
+                    <h3>Loading ...</h3>
+                </div>
+                <button class="btn-primary" type="submit" [disabled]="!addBook.valid" name="btn">Add</button>
+                 
+            </form>
+        </div>
+                
+    </body>
+</html>

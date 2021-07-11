@@ -1,0 +1,61 @@
+
+    <table>
+        <tr>
+            <th>
+                RequestID
+            </th>
+            <th>
+                userID
+            </th>
+            <th>
+                bookid
+            </th>
+            <th>
+                status
+            </th>
+            
+            <th>
+                available copy
+            </th>
+            <th>
+                Approve
+            </th>
+            <th>
+                cancel
+            </th>
+        </tr>
+       
+        <tr *ngFor="let request of list" >
+            <div *ngIf="request.request_status==pending">
+
+            
+            <td>
+                {{request.request_id}}
+            </td>
+            <td>
+                {{request.user_id}}
+            </td>
+            <td>
+                {{request.book_id}}
+            </td>
+            <td>
+                {{request.request_status}}
+            </td>
+            <td>
+                {{request.availableBook}}
+            </td>
+            <td>
+                <button (click)="approve(request.request_id)" style="color:rgb(90, 218, 111);"  [disabled]="request.availableBook<=0">approve</button>
+
+            </td>
+            <td>
+                <button (click)="cancel(request.request_id)" style="color:rgb(231, 24, 24); ">cancel</button>
+
+            </td></div>
+        </tr>
+  
+
+    </table>
+
+
+
