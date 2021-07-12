@@ -1,0 +1,150 @@
+<!-- <table>
+    <tr>
+        <th>
+            RequestID
+        </th>
+        <th>
+            userID
+        </th>
+        <th>
+            bookid
+        </th>
+        <th>
+            status
+        </th>
+        
+        <th>
+            available copy
+        </th>
+        <th>
+            Approve
+        </th>
+        <th>
+            cancel
+        </th>
+    </tr>
+   
+    <tr *ngFor="let request of list" >
+        <div *ngIf="request.request_status==pending">
+
+        
+        <td>
+            {{request.request_id}}
+        </td>
+        <td>
+            {{request.user_id}}
+        </td>
+        <td>
+            {{request.book_id}}
+        </td>
+        <td>
+            {{request.request_status}}
+        </td>
+        <td>
+            {{request.availableBook}}
+        </td>
+        <td>
+            <button (click)="approve(request.request_id)" style="color:rgb(90, 218, 111);"  [disabled]="request.availableBook<=0">approve</button>
+
+        </td>
+        <td>
+            <button (click)="cancel(request.request_id)" style="color:rgb(231, 24, 24); ">cancel</button>
+
+        </td></div>
+    </tr>
+
+
+</table> -->
+<app-nav-bar-admin></app-nav-bar-admin>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+</head>
+<body>
+    
+
+    <table>
+        <tr id="header">
+            <th>Request ID</th>
+            <th>User ID</th>
+            <th> Book ID</th>
+            <th>Available Copy</th>
+            <th>Approve</th>
+            <th>Cancel</th>
+        </tr>
+        <tr>
+            <td>John </td>
+            <td>Doe </td>
+            <td>25 </td>
+            <td>USA </td>
+            <td>
+                <button style="background-color: #607123;
+                background-image: linear-gradient(314deg, #607123 0%, #95b54c 74%);">Approve</button>   
+            </td>
+            <td>
+                <button style="background-color: #bd4f6c;
+                background-image :linear-gradient(326deg, #bd4f6c 0%, #d7816a 74%);">Cancel</button>
+            </td>
+        </tr>
+        <tr>
+            <td>steve </td>
+            <td>Doe </td>
+            <td>28 </td>
+            <td>USA </td>
+            <td>Male </td>
+
+        </tr>
+        <tr>
+            <td>simo </td>
+            <td>Doe </td>
+            <td>26 </td>
+            <td>USA </td>
+            <td>Male </td>
+
+        </tr>
+        <tr>
+            <td>karim </td>
+            <td>Doe </td>
+            <td>21 </td>
+            <td>USA </td>
+            <td>Male </td>
+
+        </tr>
+        <tr>
+            <td>adam </td>
+            <td>Doe </td>
+            <td>20 </td>
+            <td>USA </td>
+            <td>Male </td>
+
+        </tr>
+        <tr>
+            <td>keven </td>
+            <td>Doe </td>
+            <td>20 </td>
+            <td>USA </td>
+            <td>Male </td>
+
+        </tr>
+        <!-- <tr>
+            <td>{{request.request_id}}</td>
+            <td>{{request.user_id}}</td>
+            <td>{{request.book_id}}</td>
+            <td>{{request.request_status}}</td>
+            <td>{{request.availableBook}}</td>
+            <td>
+                <button (click)="approve(request.request_id)"   [disabled]="request.availableBook<=0">approve</button>    
+            </td>
+            <td>
+                <button (click)="cancel(request.request_id)" >cancel</button>    
+            </td>
+        </tr> -->
+
+    </table>
+
+</body>
+</html>

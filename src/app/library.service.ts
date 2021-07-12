@@ -39,5 +39,11 @@ export class LibraryService {
   {
     return this.http.post('https://localhost:44373/api/AddBook',book);
   }
+  cancelrequest(id:number){
+    return this.http.put('https://localhost:44373/api/request/cancel/'+id,id);
+  }
 
+  approverequest(id:number){
+    return this.http.put('https://localhost:44373/api/request/approve/'+id,id);
+  }
 }

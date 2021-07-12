@@ -14,6 +14,8 @@ import { FilterPipe } from './filter.pipe';
 import { BookUserComponent } from './book-user/book-user.component';
 import { BookAdminComponent } from './book-admin/book-admin.component';
 import { FilterComponent } from './filter/filter.component';
+import { RequestsComponent } from './requests/requests.component';
+import { IssuesComponent } from './issues/issues.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { FilterComponent } from './filter/filter.component';
     FilterPipe,
     BookUserComponent,
     BookAdminComponent,
-    FilterComponent
+    FilterComponent,
+    RequestsComponent,
+    IssuesComponent
   ],
   imports: [
     BrowserModule,
