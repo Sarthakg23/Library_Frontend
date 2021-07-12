@@ -71,4 +71,14 @@ export class LibraryService {
   {
     return this.http.put('https://localhost:44335/api/User/UpdatePassword',data);
   }
+
+  findemail(email:any)
+  {
+    return this.http.post('https://localhost:44335/api/GetUserByEmail',email);
+  }
+
+  forgotpass(data:any)
+  {
+    return this.http.put('https://localhost:44335/api/User/ForgotPassword',data);
+  }
 }

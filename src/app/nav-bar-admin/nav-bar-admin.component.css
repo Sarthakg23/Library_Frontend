@@ -1,11 +1,11 @@
-.navbar {
+.navbar2 {
     overflow: hidden;
     background-image: linear-gradient(to right,#ff9482,#7d77ff);
     font-family: sans-serif;
   }
   
   /* Links inside the navbar */
-  .navbar a {
+  .navbar2 a {
     float: right;
     font-size: 16px;
     color: white;

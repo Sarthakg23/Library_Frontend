@@ -43,8 +43,8 @@ export class SignInComponent implements OnInit {
   {
     const config=new MatDialogConfig();
     config.autoFocus=true;
-    config.width="50%";
-    config.height="75%";
+    config.width="30%";
+    config.height="50%";
     this.dialog.open(ForgotPasswordComponent,config)
   }
 
