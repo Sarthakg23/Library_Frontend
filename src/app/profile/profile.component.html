@@ -1,0 +1,16 @@
+<div style="border-radius: 25px;">
+    <h1>Profile Details</h1>
+    <hr>
+    <h3><b>Name:</b> {{user.user_name}}</h3><br>
+    <h3><b>Email:</b> {{user.user_email}}</h3><br>
+    <h3><b>Address:</b> {{user.user_address}}</h3><br>
+    <h3><b>Contact:</b> {{user.user_contact}}</h3><br>
+    <h3><b>Date of Birth:</b> {{user.user_DOB.substr(0,10)}}</h3><br>
+
+    <button style="float: right;" (click)="update()">Update Password</button>
+    <form *ngIf="show" #update="ngForm" (ngSubmit)="submit(update)" >
+    <input type="password" name="password" minlength="6" ngModel  required #password="ngModel">
+    <button type="submit">Update</button>
+    </form>
+
+</div>

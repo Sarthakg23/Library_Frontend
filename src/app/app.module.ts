@@ -17,6 +17,10 @@ import { NavBarAdminComponent } from './nav-bar-admin/nav-bar-admin.component';
 import { ViewBooksAdminComponent } from './view-books-admin/view-books-admin.component';
 import { ViewBooksUserComponent } from './view-books-user/view-books-user.component';
 import { AddBookComponent } from './add-book/add-book.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatDialogConfig, MatDialogModule} from "@angular/material/dialog";
+import { ProfileComponent } from './profile/profile.component';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 
 
 @NgModule({
@@ -30,17 +34,19 @@ import { AddBookComponent } from './add-book/add-book.component';
     ViewBooksAdminComponent,
     ViewBooksUserComponent,
     AddBookComponent,
-    
-    
+    ProfileComponent,
+    ForgotPasswordComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    MatDialogModule,
     AuthModule.forRoot({
       ...env.auth,
     }),
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

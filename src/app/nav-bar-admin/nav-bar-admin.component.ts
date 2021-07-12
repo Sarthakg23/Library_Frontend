@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { MatDialogConfig } from '@angular/material/dialog';
+import { ProfileComponent } from '../profile/profile.component';
 
 @Component({
   selector: 'app-nav-bar-admin',
@@ -7,9 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavBarAdminComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dialog:MatDialog) { }
 
   ngOnInit(): void {
   }
 
+  profile()
+  {
+    const config=new MatDialogConfig();
+    config.autoFocus=true;
+    config.width="50%";
+    config.height="75%";
+    this.dialog.open(ProfileComponent,config)
+  }
 }

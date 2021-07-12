@@ -61,4 +61,14 @@ export class LibraryService {
   {
     return this.http.post('https://localhost:44335/api/AddBook',book);
   }
+
+  getUser(id:any)
+  {
+    return this.http.get('https://localhost:44335/api/user/'+id);
+  }
+
+  updatePass(data:any)
+  {
+    return this.http.put('https://localhost:44335/api/User/UpdatePassword',data);
+  }
 }

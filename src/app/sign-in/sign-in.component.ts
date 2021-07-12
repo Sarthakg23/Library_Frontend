@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import jwtDecode from 'jwt-decode';
+import { ForgotPasswordComponent } from '../forgot-password/forgot-password.component';
 import { LibraryService } from '../library.service';
 
 @Component({
@@ -10,7 +12,7 @@ import { LibraryService } from '../library.service';
 })
 export class SignInComponent implements OnInit {
 
-  constructor(private libService:LibraryService, private router:Router) { }
+  constructor(private libService:LibraryService, private router:Router,private dialog:MatDialog) { }
 
   ngOnInit(): void {
   }
@@ -21,6 +23,7 @@ export class SignInComponent implements OnInit {
     const user={"user_email":form.useremail,"user_password":form.password};
     this.libService.signIn(user).subscribe((data:any)=>
       {
+        localStorage.setItem("token",data);
         const decodedToken:any=jwtDecode(data);
         console.log(decodedToken);
         console.log(decodedToken.role);
@@ -34,6 +37,15 @@ export class SignInComponent implements OnInit {
         this.router.navigate(['/view-books-user']);
       }
       })
+  }
+
+  forgot()
+  {
+    const config=new MatDialogConfig();
+    config.autoFocus=true;
+    config.width="50%";
+    config.height="75%";
+    this.dialog.open(ForgotPasswordComponent,config)
   }
 
 }
