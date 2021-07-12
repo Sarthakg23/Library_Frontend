@@ -1,0 +1,25 @@
+<app-nav-bar></app-nav-bar>
+<html>
+    <meta charset="utf-8">
+    <title>Sign in form</title>
+    <body>
+        <div class="center">
+            <h1 style="font-size: large;">Welcome back!</h1>
+            <form #signin="ngForm" (ngSubmit)="onSubmit(signin.value)" >
+                <div class="txt_field">
+                    <input type="text" name="useremail" ngModel email required #useremail="ngModel"> <br>
+                    <label>Email Address</label>
+                    <small [style.color]="useremail.touched && !useremail.valid ? 'red':'rgb(6, 252, 47)'">*Enter valid Email</small> <br>                       
+                </div>
+                <div class="txt_field">
+                    <input type="password" name="password" ngModel required minlength="6" #password="ngModel"> <br>
+                    <label>Password</label>
+                    <small [style.color]="password.touched && !password.valid ? 'red':'rgb(6, 252, 47)'">Greater than 6</small> <br>            
+                </div>
+                <button class="btn-primary" type="submit" [disabled]="!signin.valid" name="btn" >SignIn</button>
+                <div class="signup_link">Not a member? <a routerLink="/signUp">SignUp</a></div>  
+            </form>
+        </div>
+            
+    </body>
+</html>

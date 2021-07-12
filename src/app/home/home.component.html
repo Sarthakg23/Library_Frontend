@@ -1,0 +1,129 @@
+<app-nav-bar></app-nav-bar>
+<html>
+    <head>
+        <title>Hotel Management System</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" >
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" ></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
+        <link rel="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
+    </head>
+    <body>
+
+        <!-- banner section -->
+
+        <section id="banner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="promo-title">WANT TO ISSUE A BOOK?</p><br>
+                        <P>You will find books with 100+ languages, 1000+authors and we also provide books according to your mood. WELCOME!</P>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <img src="assets/264745.png" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+            <img src="assets/wave1.png" class="bottom-img">
+        </section>
+
+        <!-- Hotels availability section -->
+
+        <section id="services">
+            <div class="container text-center">
+                <h1 class="title">BOOKS WE OFFER</h1>
+                <div class="row text-center">
+                    <div class="col-md-4 services">
+                        <img src="assets/genre.png" class="service-img">
+                        <h4>GENRE</h4>
+                        <p>You will make no mistake while choosing us. You can issue your books according to your moods.</p>
+                    </div>
+                    <div class="col-md-4 services">
+                        <img src="assets/download.png" class="service-img2">
+                        <h4>FAMOUS AUTHORS</h4>
+                        <p>If you are a fan of famous authors, this is the best place for you to be. Please visit our book sections and issue yours.</p>
+                    </div>
+                    <div class="col-md-4 services">
+                        <img src="assets/unnamed (1).jpg" class="service-img3">
+                        <h4>LANGUAGES</h4>
+                        <p>We have 100+ different languages books. From kashmir to kanyakumari, we care for your needs. Start librarying with us.</p>
+                    </div>
+                </div><br>
+                <button type="button" class="btn btn-primary" routerLink="/books" > All Books</button><br><br>
+                <!-- <button type="button" class="btn btn-primary" routerLink="/bookAdmin" >Book Admin</button> -->
+            </div>
+        </section>
+
+        <!-- Service section -->
+
+        <section id="availability">
+            <div class="container text-center">
+                <h1 class="title text-center">WHY CHOOSE US?</h1>
+                <div class="row offset-1">
+                    <div class="col-md-4 availability">
+                        <h4 style="text-align: center;">24*7 Available</h4><br>
+                        <p>We are available for you whenever you need us. You will find the best service here.</p>
+                        <img src="assets/5083559.png">
+                        <p class="user-details"><b>Sarthak Goyal</b><br>Co-founder at xyz</p>
+                    </div>
+                    <div class="col-md-4 availability">
+                        <h4 style="text-align: center;">E-Book Available</h4><br>
+                        <p>We are available for you whenever you need us. You will find the best service here.</p>
+                        <img src="assets/ebook.png">
+                        <p class="user-details"><b>Rohit Manathiya</b><br>Co-founder at xyz</p>
+                    </div>
+                    <div class="col-md-4 availability">
+                        <h4 style="text-align: center;">Issue Book for free</h4><br>
+                        <p>We are available for you whenever you need us. You will find the best service here.</p>
+                        <img src="assets/download.png">
+                        <p class="user-details"><b>Pooja Bathla</b><br>Co-founder at xyz</p>
+                    </div>
+                </div><br>
+                <button type="button" class="btn btn-primary" routerLink="/signIn" >Start Librarying</button>
+            </div>
+        </section>
+
+        <!--  Social Media Section  -->
+
+        <section id="social-media">
+            <div class="container text-center">
+                <p>FIND US ON SOCIAL MEDIA</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=100009343809498"><img src="assets/facebook-icon.png"></a>
+                    <a href="https://www.instagram.com/pooja__bathla/"><img src="assets/instagram-icon.png"></a>
+                    <a href="https://twitter.com/?lang=en"><img src="assets/twitter-icon.png"></a>
+                    <a href="https://www.linkedin.com/in/pooja-bathla-0809/"><img src="assets/linkedin-icon.png"></a>                    
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer section -->
+
+        <section id="footer">
+            <img src="assets/wave2.png" class="footer-img">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 footer-box">
+                        <img src="assets/logo1.png">
+                        <p>From start to fininsh, our website will help your librarying make tension free. Find free books and enjoy learning exciting things.</p>
+                    </div>
+                    <div class="col-md-6 footer-box">
+                        <p><b>CONTACT US</b></p>
+                        <p><i class="fa fa-map-marker"></i>Library Management System, India</p>
+                        <p><i class="fa fa-map-phone" ></i>+91 012345678</p>
+                        <p><i class="fa fa-map-envelope-o" ></i>xyz@gmail.com</p>
+                    </div>
+                </div>
+                <hr><br>
+                <p class="copyright">Terms and Conditions applied</p>
+            </div>
+        </section>
+
+        <!-- smooth scroll -->
+
+        <!-- <script src="smooth-scroll.js"></script> -->
+        <script>
+            var scroll = new SmoothScroll('a[href*="#"]');
+        </script>
+    </body>
+</html>
