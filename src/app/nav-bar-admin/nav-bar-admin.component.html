@@ -1,8 +1,8 @@
 <div class="navbar2">
-    <a href="#news">Logout</a>
+    <a (click)="logout()" *ngIf="isloggedin">Logout</a>
     <a (click)="profile()">My Profile</a>
-    <a href="#news">Add Admin</a>
-    <a href="#news">Calculate Fine</a>
+    <a routerLink="/add-admin">Add Admin</a>
+    <a routerLink="/calc-fine">Calculate Fine</a>
     <a href="#news">Requests</a>
     <a href="#news">Issues</a>
  

@@ -21,6 +21,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatDialogConfig, MatDialogModule} from "@angular/material/dialog";
 import { ProfileComponent } from './profile/profile.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { AddAdminComponent } from './add-admin/add-admin.component';
+import { CalcFineComponent } from './calc-fine/calc-fine.component';
+import { FilterPipe } from './filter.pipe';
 
 
 @NgModule({
@@ -36,6 +39,9 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
     AddBookComponent,
     ProfileComponent,
     ForgotPasswordComponent,
+    AddAdminComponent,
+    CalcFineComponent,
+    FilterPipe,
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import jwtDecode from 'jwt-decode';
 import { LibraryService } from '../library.service';
 
 @Component({
@@ -13,9 +15,29 @@ export class AddBookComponent implements OnInit {
     file: any = null; // Variable to store file
     pdf:any=null;
     b_image:any=null;
-  constructor(private libraryService:LibraryService) { }
+  constructor(private libraryService:LibraryService,private router:Router) { }
 
   ngOnInit(): void {
+    if(localStorage.getItem("token"))
+    {
+        const decodedToken:any=jwtDecode(localStorage.getItem("token")||"");
+        if( Date.now() > decodedToken.exp*1000)
+        {
+        alert("Session Expired!")
+        this.router.navigate(['/signIn'])
+        }
+        else
+        {
+           if(decodedToken.role==='admin')
+           {
+             this.router.navigate(['/add-book'])
+           }
+          }
+    }
+    else
+    {
+      this.router.navigate(['/signIn'])
+    }
   }
 
   onChange(event:any) {

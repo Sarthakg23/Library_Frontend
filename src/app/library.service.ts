@@ -81,4 +81,20 @@ export class LibraryService {
   {
     return this.http.put('https://localhost:44335/api/User/ForgotPassword',data);
   }
+
+  calcFine()
+  {
+    return this.http.get('https://localhost:44335/api/issue/calculateFine');
+  }
+
+  isrequested(data:any)
+  {
+    return this.http.post('https://localhost:44335/api/isRequested',data);
+  }
+
+  requestbook(data:any)
+  {
+    return this.http.post('https://localhost:44335/api/request',data);
+  }
+  
 }
