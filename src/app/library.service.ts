@@ -97,4 +97,8 @@ export class LibraryService {
     return this.http.post('https://localhost:44335/api/request',data);
   }
   
+  new()
+  {
+    
+  }
 }
