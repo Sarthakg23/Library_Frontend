@@ -28,6 +28,14 @@ export class NavBarUserComponent implements OnInit {
            {
              this.router.navigate(['/view-books-admin'])
            }
+           else if(decodedToken.role==='user'&&this.router.url=="/requests-user")
+           {
+             this.router.navigate(['/requests-user']);
+           }
+           else if(decodedToken.role==='user'&&this.router.url=="/issues-user")
+           {
+             this.router.navigate(['/issues-user']);
+           }
             else if(decodedToken.role==='user')
             {
               this.router.navigate(['/view-books-user']);

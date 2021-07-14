@@ -1,0 +1,66 @@
+<app-nav-bar-admin></app-nav-bar-admin>
+    <!DOCTYPE html>
+    <html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Table</title>
+    </head>
+    <body>
+        
+    
+        <table>
+            <tr id="header">
+                <th>Request ID</th>
+                <th>User ID</th>
+                <th>Book ID</th>
+                <th>status</th>
+                <th>Available Copy</th>
+                <th>Approve</th>
+                <th>Cancel</th>
+            </tr>
+            <tr *ngFor="let request of list">
+                <td>
+                    {{request.request_id}}
+                </td>
+                <td>
+                    {{request.user_id}}
+                </td>
+                <td>
+                    {{request.book_id}}
+                </td>
+                <td>
+                    {{request.request_status}}
+                </td>
+                <td>
+                    {{request.availableBook}}
+                </td>
+                <td>
+                    <button  (click)="approve(request.request_id)" [disabled]="request.availableBook<=0 || request.request_status=='Approved' || request.request_status=='Cancelled'" style="background-color: #11f85e;
+                    background-image :linear-gradient(326deg, #1d9737 0%, #b6d76a 74%); ">Approve</button>
+                </td>
+                <td>
+                    <button  (click)="cancel(request.request_id)" [disabled]="request.request_status=='Cancelled' || request.request_status=='Approved'" style="background-color: #bd4f6c;
+                    background-image :linear-gradient(326deg, #bd4f6c 0%, #d7816a 74%); ">Cancel</button>
+                </td>
+            </tr>
+            
+            <!-- <tr>
+                <td>{{request.request_id}}</td>
+                <td>{{request.user_id}}</td>
+                <td>{{request.book_id}}</td>
+                <td>{{request.request_status}}</td>
+                <td>{{request.availableBook}}</td>
+                <td>
+                    <button (click)="approve(request.request_id)"   [disabled]="request.availableBook<=0">approve</button>    
+                </td>
+                <td>
+                    <button (click)="cancel(request.request_id)" >cancel</button>    
+                </td>
+            </tr> -->
+    
+        </table>
+    
+    </body>
+    </html>

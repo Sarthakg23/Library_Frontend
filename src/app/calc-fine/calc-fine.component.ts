@@ -8,12 +8,12 @@ import { LibraryService } from '../library.service';
 })
 export class CalcFineComponent implements OnInit {
 
-  issues:any;
+  list:any;
   constructor(private libraryService:LibraryService) { }
 
   ngOnInit(): void {
     this.libraryService.calcFine().subscribe(data=>{
-      this.issues=data;
+      this.list=data;
     },
     error=>{
       alert("No Issues have fine!")

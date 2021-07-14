@@ -70,7 +70,7 @@
                     <i style="font-size: small;">By: {{list.AUTHOR}},{{list.PUBLISHER}} ({{list.LANG}})</i>
                     <br>
                     <br>
-                    <i>Rack no. : <input #rn type="text" value="{{list.RACK_NO}}" name="Rack_no"  style="width:15px; border: none;" ></i>
+                    <i>Rack no. : <input #rn type="number" value="{{list.RACK_NO}}" name="Rack_no"  style="width:50px; border: none;" ></i>
                     <button  class="btn btn-primary" (click)="updateBook(list.ID,rn.value)" style="float:right;">Update Rack</button>
                     <br><br>
                     

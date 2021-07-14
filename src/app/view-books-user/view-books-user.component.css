@@ -16,9 +16,9 @@
   grid-template-rows: auto auto auto;
   grid-row-gap: 20px; 
   grid-column-gap: 20px;
-  width: 50%;
+  width: 65%;
   padding-bottom: 20px;
-
+  
 }
 
 button{
@@ -46,10 +46,10 @@ button{
     box-shadow: none;
     padding: 8px 25px;
     border: none;
-    float: right;
     border-radius: 5px;
     background-image: linear-gradient(to right,#ff9482,#7d77ff);
     align-self: center;
+    margin-left: 200px;
 }
 .btn-primary:hover{
   transform: translateY(-2px);

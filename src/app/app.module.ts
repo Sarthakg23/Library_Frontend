@@ -24,6 +24,10 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
 import { AddAdminComponent } from './add-admin/add-admin.component';
 import { CalcFineComponent } from './calc-fine/calc-fine.component';
 import { FilterPipe } from './filter.pipe';
+import { RequestsAdminComponent } from './requests-admin/requests-admin.component';
+import { IssuesAdminComponent } from './issues-admin/issues-admin.component';
+import { RequestsUserComponent } from './requests-user/requests-user.component';
+import { IssuesUserComponent } from './issues-user/issues-user.component';
 
 
 @NgModule({
@@ -42,6 +46,10 @@ import { FilterPipe } from './filter.pipe';
     AddAdminComponent,
     CalcFineComponent,
     FilterPipe,
+    RequestsAdminComponent,
+    IssuesAdminComponent,
+    RequestsUserComponent,
+    IssuesUserComponent,
   ],
   imports: [
     BrowserModule,

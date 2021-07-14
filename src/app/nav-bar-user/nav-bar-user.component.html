@@ -1,6 +1,12 @@
 <div class="navbar2">
-  <a (click)="logout()" *ngIf="isloggedin">Logout</a>
-  <a href="#news" *ngIf="isloggedin">Requests</a>
-  <a href="#news" *ngIf="isloggedin">Issues</a>
+  <a href="#" style="float: left;"><img src="/assets/logo1.png" style="width: 70px; height: 40px;"></a>
   <a routerLink="/signIn" *ngIf="!isloggedin">SignIn</a>
+  <a (click)="logout()" *ngIf="isloggedin">Logout</a>
+  <a routerLink="/view-books-user" *ngIf="isloggedin">View Books</a>
+  <a routerLink="/requests-user" *ngIf="isloggedin">Requests</a>
+  <a routerLink="/issues-user" *ngIf="isloggedin">Issues</a>
+  <a href="#services" *ngIf="!isloggedin">Books</a>
+  <a href="#availability" *ngIf="!isloggedin">Services</a>
+  <a href="#social-media" *ngIf="!isloggedin">Contact</a>
+
 </div>
