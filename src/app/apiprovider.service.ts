@@ -71,6 +71,23 @@ export class ApiproviderService {
      return this.http.post('https://localhost:44300/api/AddBook',book);
   }
 
+  requestUser(id:number){
+    return this.http.post('https://localhost:44300/api/requestByUserId/'+id,id);
+  }
+
+  requestcancelByuser(id:number){
+    return this.http.delete('https://localhost:44300/api/deletebyuser/'+id);
+  }
+
+  issueByUserId(id:number){
+    return this.http.post('https://localhost:44300/api/issueByUserId/'+id,id);
+  }
+
+  returnBook(id:number){
+    return this.http.delete('https://localhost:44300/api/returnBook/'+id);
+  }
+  
+
 
 
 }

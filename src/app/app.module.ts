@@ -13,7 +13,9 @@ import { BooklistComponent } from './booklist/booklist.component';
 import {HttpClientModule} from '@angular/common/http';
 import { RequestsComponent } from './requests/requests.component';
 import { IssuesComponent } from './issues/issues.component';
-import { AddBookComponent } from './add-book/add-book.component'
+import { AddBookComponent } from './add-book/add-book.component';
+import { RequestUserComponent } from './request-user/request-user.component';
+import { IssuesUserComponent } from './issues-user/issues-user.component'
 
 
 @NgModule({
@@ -26,7 +28,9 @@ import { AddBookComponent } from './add-book/add-book.component'
     BooklistComponent,
     RequestsComponent,
     IssuesComponent,
-    AddBookComponent
+    AddBookComponent,
+    RequestUserComponent,
+    IssuesUserComponent
   ],
   imports: [
     BrowserModule,

@@ -17,4 +17,15 @@ export class IssuesComponent implements OnInit {
     })
   }
 
+  calculateFine(dateSent:any){
+    let currentDate = new Date();
+   dateSent = new Date(dateSent);
+
+    let diff= Math.floor((Date.UTC(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate()) - Date.UTC(dateSent.getFullYear(), dateSent.getMonth(), dateSent.getDate()) ));
+    if(diff<=0){
+      return 0;
+    }
+    return diff*15;
+  }
+
 }

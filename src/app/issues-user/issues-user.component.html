@@ -1,4 +1,4 @@
-<p>issues works!</p>
+<p>issues-user works!</p>
 
 
 
@@ -25,13 +25,16 @@
             <th>Fine</th>
             <th>Action</th>
         </tr>
-        <tr *ngFor="let issue of issueList">
+        <tr *ngFor="let issue of list">
             <td>{{issue.ISSUE_ID}}</td>
             <td>{{issue.ISSUE_DATE}}</td>
             <td>{{issue.RETURN_DATE}}</td>
 
             <td>{{calculateFine(issue.RETURN_DATE)}}</td>
-            
+            <td>
+                <button  (click)="returnBook(issue.ISSUE_ID,issue.REQUEST_ID)" style="background-color: #bd4f6c;
+                background-image :linear-gradient(326deg, #bd4f6c 0%, #d7816a 74%); ">Return</button>
+            </td>
         </tr>
         
         <!-- <tr>

@@ -22,11 +22,6 @@ export class BooklistComponent implements OnInit {
   }
   requestBook(ID:number){
     console.log(ID);
-
-
-
-    
-
     let token=localStorage.getItem('userToken')!;
     let decode:any=jwtDecode(token);
     console.log(decode);
@@ -69,8 +64,6 @@ export class BooklistComponent implements OnInit {
           console.log(d);
         })
   }
-  return(id:number){
-    
-  }
+  
 
 }
