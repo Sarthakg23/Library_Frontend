@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LibraryService } from '../library.service';
 
 @Component({
   selector: 'app-issues-admin',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IssuesAdminComponent implements OnInit {
 
-  constructor() { }
+  constructor(private http:LibraryService) { }
+  list:any=[];
 
   ngOnInit(): void {
+    this.http.allIssues().subscribe(d=>{
+      this.list=d;
+    })
   }
 
 }

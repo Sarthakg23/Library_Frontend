@@ -1,1 +1,53 @@
-<p>issues-admin works!</p>
+<app-nav-bar-user></app-nav-bar-user>
+
+
+
+
+<!-- <p>request-user works!</p -->
+
+
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+</head>
+<body>
+    
+
+    <table>
+        <tr id="header">
+            <th>Issue ID</th>
+            <th>Issue_Date</th>
+            <th>Return Date</th>
+            <th>Fine</th>
+            <th>Action</th>
+        </tr>
+        <tr *ngFor="let issue of list">
+            <td>{{issue.ISSUE_ID}}</td>
+            <td>{{issue.ISSUE_DATE.substring(0,10)}}</td>
+            <td>{{issue.RETURN_DATE.substring(0,10)}}</td>
+            <td>{{issue.FINE}}</td>
+            
+        </tr>
+        
+        <!-- <tr>
+            <td>{{request.request_id}}</td>
+            <td>{{request.user_id}}</td>
+            <td>{{request.book_id}}</td>
+            <td>{{request.request_status}}</td>
+            <td>{{request.availableBook}}</td>
+            <td>
+                <button (click)="approve(request.request_id)"   [disabled]="request.availableBook<=0">approve</button>    
+            </td>
+            <td>
+                <button (click)="cancel(request.request_id)" >cancel</button>    
+            </td>
+        </tr> -->
+
+    </table>
+
+</body>
+</html>
