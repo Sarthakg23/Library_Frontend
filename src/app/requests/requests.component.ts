@@ -10,6 +10,9 @@ export class RequestsComponent implements OnInit {
 
   list:any=[];
   pending="pending";
+  can="canceled";
+  approved="approved";
+
 
   userlist:any;
   constructor(private api:ApiproviderService) { }
