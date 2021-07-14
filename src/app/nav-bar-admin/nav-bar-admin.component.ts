@@ -43,6 +43,11 @@ export class NavBarAdminComponent implements OnInit {
             {
               this.router.navigate(['/view-books-user']);
             }
+            
+            else if(decodedToken.role==='admin'&&this.router.url=='/requests-admin')
+            {
+              this.router.navigate(['/requests-admin'])
+            }
             else if(decodedToken.role==='admin')
             {
               this.router.navigate(['/view-books-admin'])

@@ -97,8 +97,43 @@ export class LibraryService {
     return this.http.post('https://localhost:44335/api/request',data);
   }
   
-  new()
+  allrequest()
   {
-    
+    return this.http.get('https://localhost:44335/api/request');
+  }
+
+  approverequest(id:any)
+  {
+    return this.http.get('https://localhost:44335/api/request/approve/'+id);
+  }
+
+  cancelrequest(id:any)
+  {
+    return this.http.get('https://localhost:44335/api/request/cancel/'+id);
+  }
+
+  requestsbyUser(id:any)
+  {
+    return this.http.get('https://localhost:44335/api/request/user'+id);
+  }
+
+  deletereq(id:any)
+  {
+    return this.http.delete('https://localhost:44335/api/deletebyuser/'+id);
+  }
+
+  issuesByUser(id:any)
+  {
+    return this.http.get('https://localhost:44335/api/issue/user/'+id);
+  }
+
+  returnBook(id:any)
+  {
+    return this.http.get('https://localhost:44335/api/issue/return/'+id);
+  }
+
+  reIssue(id:any)
+  {
+    return this.http.get('https://localhost:44335/api/issue/reIssue/'+id);
   }
 }

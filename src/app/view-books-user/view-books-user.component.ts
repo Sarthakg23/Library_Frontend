@@ -70,7 +70,7 @@ export class ViewBooksUserComponent implements OnInit {
         else{
           let request_status="Pending";
           let reIssue_id=null;
-          let request_date=Date.now();
+          let request_date=new Date();
           let request_approve_date=null;
           let request={
             "user_id":user_id,

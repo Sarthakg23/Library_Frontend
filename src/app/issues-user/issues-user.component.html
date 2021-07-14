@@ -1,4 +1,4 @@
-<app-nav-bar-admin></app-nav-bar-admin>
+<app-nav-bar-user></app-nav-bar-user>
 
 
 
@@ -23,13 +23,19 @@
             <th>Issue_Date</th>
             <th>Return Date</th>
             <th>Fine</th>
-           
+            <th>Action</th>
         </tr>
         <tr *ngFor="let issue of list">
             <td>{{issue.ISSUE_ID}}</td>
             <td>{{issue.ISSUE_DATE.substring(0,10)}}</td>
             <td>{{issue.RETURN_DATE.substring(0,10)}}</td>
             <td>{{issue.FINE}}</td>
+            <td>
+                <button *ngIf="issue.REISSUED==0" (click)="reIssue(issue.ISSUE_ID)" style="background-color: #bd4f6c;
+                background-image :linear-gradient(326deg, #bd4f6c 0%, #d7816a 74%); ">ReIssue</button><br>
+                <button  (click)="returnBook(issue.ISSUE_ID)" style="background-color: #bd4f6c;
+                background-image :linear-gradient(326deg, #bd4f6c 0%, #d7816a 74%); margin-top: 10px;">Return</button>
+            </td>
         </tr>
         
         <!-- <tr>
