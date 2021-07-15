@@ -49,7 +49,7 @@ button{
     border-radius: 5px;
     background-image: linear-gradient(to right,#ff9482,#7d77ff);
     align-self: center;
-    margin-left: 200px;
+    margin-left: 180px;
 }
 .btn-primary:hover{
   transform: translateY(-2px);

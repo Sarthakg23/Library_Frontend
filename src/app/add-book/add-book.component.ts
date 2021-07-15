@@ -93,13 +93,15 @@ if(this.pdf==null)
     else
     {
       this.loading=true;
-    console.log(this.file);
-    this.libraryService.upload(this.file).subscribe(
+    console.log(this.pdf);
+    this.libraryService.upload(this.pdf).subscribe(
         (event: any) => {
+
+          console.log(event)
             if (typeof (event) === 'object') {
 
                 // Short link via api response
-                this.shortLink = event.link;
+                this.shortLink = event.data.downloadPage;
 
                 this.loading = false; // Flag variable 
             }
@@ -123,9 +125,9 @@ onSubmit(form:any)
     alert("Book Selected But not uploaded!")
     else
     {
-    const obj={"TITLE":form.title,"AUTHOR":form.author,"PUBLISHER":form.publisher,"ISBN":form.isbn,"GENERE":form.genere,"B_IMAGE":this.b_image,"RACKNO":form.rackno,"E_BOOK":this.shortLink,"LANG":form.lang,"TOTAL_COPIES":form.copies,"AVAILABLE_COPIES":form.copies,"YOP":form.yop};
+    const obj={"TITLE":form.title,"AUTHOR":form.author,"PUBLISHER":form.publisher,"ISBN":form.isbn,"GENERE":form.genere,"B_IMAGE":this.b_image,"RACK_NO":form.rackno,"E_BOOK":this.shortLink,"LANG":form.lang,"TOTAL_COPIES":form.copies,"AVAILABLE_COPIES":form.copies,"YOP":form.yop};
  console.log(obj);
- this.libraryService.addBook(obj).subscribe(data=>{alert("Book Added")})
+ this.libraryService.addBook(obj).subscribe(data=>{alert("Book Added"); window.location.reload();})
     }
   }
 }

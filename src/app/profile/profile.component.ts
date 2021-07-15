@@ -38,6 +38,9 @@ export class ProfileComponent implements OnInit {
       const data={"user_id":this.user.user_id,"user_password":password.value.password};
       this.libraryService.updatePass(data).subscribe(data=>{
         alert("Password Updated!");
+
+        const mail={"to":this.user.user_email,"subject":"Password Updated","message":"Hi ,\n\n Your Password has Updated Successfully. Please feel free to contact for further information."};
+        this.libraryService.mail(mail).subscribe(data=>{alert("Psssword Update Mail Sent")});
         this.show=false;
       })
     }

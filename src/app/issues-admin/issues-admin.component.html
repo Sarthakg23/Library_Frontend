@@ -1,1 +1,51 @@
-<p>issues-admin works!</p>
+<app-nav-bar-admin></app-nav-bar-admin>
+
+
+
+
+<!-- <p>request-user works!</p -->
+
+
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+</head>
+<body>
+    
+
+    <table>
+        <tr id="header">
+            <th>Issue ID</th>
+            <th>Request ID</th>
+            <th>Issue_Date</th>
+            <th>Return Date</th>
+            <th>Re-Issued</th>
+            <th>Fine</th>
+         
+        </tr>
+        <tr *ngFor="let issue of list">
+            <td>{{issue.ISSUE_ID}}</td>
+            <td>{{issue.REQUEST_ID}}</td>
+            <td>{{issue.ISSUE_DATE.substring(0,10)}}</td>
+            <td>{{issue.RETURN_DATE.substring(0,10)}}</td>
+            <td>{{issue.REISSUED}}</td>
+            <td>{{issue.FINE}}</td>
+           
+        </tr>
+    </table>
+    
+    <table class="total">
+        <tr>
+            <td style="background-image: linear-gradient(to right,#ff9482,#7d77ff);">Total Fine</td>
+            <td> {{totalfine}}</td>
+        </tr>
+    </table>
+
+    
+
+</body>
+</html>
