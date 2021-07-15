@@ -140,4 +140,8 @@ export class LibraryService {
   allIssues(){
     return this.http.get('https://localhost:44335/api/allissues');
   }
+
+  userEmailByIssueId(id:number){
+    return this.http.get('https://localhost:44335/api/issue/userEmail/'+id);
+  }
 }
