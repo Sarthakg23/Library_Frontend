@@ -136,4 +136,8 @@ export class LibraryService {
   {
     return this.http.get('https://localhost:44335/api/issue/reIssue/'+id);
   }
+
+  allIssues(){
+    return this.http.get('https://localhost:44335/api/allissues');
+  }
 }
