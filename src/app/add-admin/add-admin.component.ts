@@ -18,6 +18,7 @@ export class AddAdminComponent implements OnInit {
   onSubmit(form:any)
   {
     const obj={"user_name":form.username,"user_email":form.useremail,"user_password":form.password,"user_gender":form.usergender,"user_type":"admin","user_age":form.userage,"user_DOB":form.userDOB,"user_address":form.useradress,"user_contact":form.usercontact};
+    console.log(obj);
     this.libraryService.signUp(obj).subscribe(data=>
       {
         const mail={"to":form.useremail,"subject":"SignUp SuccessFull","message":"Welcome"+form.username+"\nYou are successfully registered on Library Management System.\n Now you can issue books and download e-books."}

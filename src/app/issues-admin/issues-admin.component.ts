@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LibraryService } from '../library.service';
 
 @Component({
   selector: 'app-issues-admin',
@@ -7,9 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IssuesAdminComponent implements OnInit {
 
-  constructor() { }
+  list:any;
+  totalfine=0;
+  constructor(private ls:LibraryService) { }
 
   ngOnInit(): void {
+    this.ls.allIssues().subscribe((data:any)=>{
+      this.list=data;
+
+      console.log(data);
+   
+       data.forEach((e:any) => {
+         console.log(e.FINE);
+        this.totalfine+=e.FINE;
+      });
+      console.log(this.totalfine);
+    })
   }
+
+
 
 }

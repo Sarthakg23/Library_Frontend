@@ -7,7 +7,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 })
 export class LibraryService {
 
-  baseApiUrl = "https://file.io"
+  baseApiUrl = "https://store9.gofile.io/uploadFile"
   constructor(private http:HttpClient) {
 
    }
@@ -23,7 +23,7 @@ export class LibraryService {
     const formData = new FormData(); 
       
     // Store form name as "file" with file data
-    formData.append("file", file, file.name);
+    formData.append("file", file);
       
     // Make http post request over api
     // with formData as req
@@ -135,5 +135,14 @@ export class LibraryService {
   reIssue(id:any)
   {
     return this.http.get('https://localhost:44335/api/issue/reIssue/'+id);
+  }
+
+  allIssues()
+  {
+    return this.http.get('https://localhost:44335/api/issue/');
+  }
+  
+  userEmailByIssueId(id:number){
+    return this.http.get('https://localhost:44335/api/issue/userEmail/'+id);
   }
 }

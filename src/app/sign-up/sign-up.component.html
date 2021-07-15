@@ -8,7 +8,7 @@
             <form #signup="ngForm" (ngSubmit)="onSubmit(signup.value)">
                 <div class="txt_field">
                     <input type="text" name="username" ngModel required #username="ngModel"> <br>
-                    <label>Email Full Name</label>
+                    <label>Enter Full Name</label>
                     <small [style.color]="username.touched && !username.valid ? 'red':'rgb(6, 252, 47)'">*Enter valid Name</small> <br>                       
                 </div>
                 <div class="txt_field">
@@ -27,13 +27,13 @@
                     <small [style.color]="usergender.touched && !usergender.valid ? 'red':'rgb(6, 252, 47)'">*Enter your Gender</small> <br>                       
                 </div>
                 <div class="txt_field">
-                    <input type="number" name="userage" ngModel required #userage="ngModel"> <br>
-                    <label>Email your age</label>
+                    <input type="number" name="userage" min="1" ngModel required #userage="ngModel"> <br>
+                    <label>Enter your age</label>
                     <small [style.color]="userage.touched && !userage.valid ? 'red':'rgb(6, 252, 47)'">*Enter valid age</small> <br>                       
                 </div>
                 <div class="txt_field">
                     <input type="date" name="userDOB" ngModel required #userDOB="ngModel"> <br>
-                    <label>Email your DOB</label>
+                    <label>Enter your DOB</label>
                     <small [style.color]="userDOB.touched && !userDOB.valid ? 'red':'rgb(6, 252, 47)'">*Enter valid DOB</small> <br>                       
                 </div>
                 <div class="txt_field">
@@ -42,8 +42,8 @@
                     <small [style.color]="useradress.touched && !useradress.valid ? 'red':'rgb(6, 252, 47)'">*Enter valid Address</small> <br>                       
                 </div>
                 <div class="txt_field">
-                    <input type="number" name="usercontact" ngModel required #usercontact="ngModel"> <br>
-                    <label>Email your contact number</label>
+                    <input type="number" name="usercontact" min="10" max="10" ngModel required #usercontact="ngModel"> <br>
+                    <label>Enter your contact number</label>
                     <small [style.color]="usercontact.touched && !usercontact.valid ? 'red':'rgb(6, 252, 47)'">*Enter valid Mobile no.</small> <br>                       
                 </div>
                 <button class="btn-primary" type="submit" [disabled]="!signup.valid" name="btn">SignUp</button>

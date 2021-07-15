@@ -62,27 +62,31 @@ export class ViewBooksAdminComponent implements OnInit {
     })
   
   }
-
   clickTitle(){
-  this.showTitle=true;
-  this.showLang=false;
-  this.showGenre=false;
-  
-  }
-  clickLang(){
+    if(this.showTitle==true)
+    {
+    this.Title='';
     this.showTitle=false;
-  this.showLang=true;
-  this.showGenre=false;
-  }
-  clickGenre(){
-    this.showTitle=false;
-  this.showLang=false;
-  this.showGenre=true;
-  console.log(this.lists);
-  }
-  clickAll(){
+    }
+    else
     this.showTitle=true;
-  this.showLang=true;
-  this.showGenre=true;
-  }
+    }
+    clickLang(){
+      if(this.showLang==true)
+      {
+        this.Language='';
+        this.showLang=false;
+      }
+      else
+      this.showLang=true;
+    }
+    clickGenre(){
+      if(this.showGenre==true)
+      {
+        this.Genre='';
+      this.showGenre=false;
+      }
+      else
+      this.showGenre=true;
+    }
 }

@@ -13,51 +13,53 @@
         <div class="search-container">
             
               
-              <button style="border: solid black 0.2px;"(click)="clickTitle()" >
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" fill="currentColor" class="bi bi-funnel-fill" viewBox="0 0 16 16" id="button1" >
-                    <path d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2z"/>
-                  </svg>Title
-              </button>
-              <button style="border: solid black 0.2px;"(click)="clickLang()" >
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" fill="currentColor" class="bi bi-funnel-fill" viewBox="0 0 16 16" id="button2">
-                    <path d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2z"/>
-                  </svg>Language
-              </button>
-              <button style="border: solid black 0.2px;"(click)="clickGenre()" >
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" fill="currentColor" class="bi bi-funnel-fill" viewBox="0 0 16 16" id="button3">
-                    <path d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2z"/>
-                  </svg>Genre
-              </button>                            
+            <button style="border: solid black 0.2px;"(click)="clickTitle()" >
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" fill="currentColor" class="bi bi-funnel-fill" viewBox="0 0 16 16" id="button1" >
+                  <path d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2z"/>
+                </svg>Title
+            </button>
+            <button style="border: solid black 0.2px;"(click)="clickLang()" >
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" fill="currentColor" class="bi bi-funnel-fill" viewBox="0 0 16 16" id="button2">
+                  <path d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2z"/>
+                </svg>Language
+            </button>
+            <button style="border: solid black 0.2px;"(click)="clickGenre()" >
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" fill="currentColor" class="bi bi-funnel-fill" viewBox="0 0 16 16" id="button3">
+                  <path d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2z"/>
+                </svg>Genre
+            </button>                            
 
-              <div *ngIf="showTitle">
-                <span class="fa fa-search"></span>
-                <input type="text" placeholder="Search By Title" [(ngModel)]='Title' list="Title" id="title" >
-                <datalist id="Title">
-                    <div *ngFor="let list of lists">
-                        <option value="{{list.TITLE}}">
-                    </div>                      
-                </datalist> 
-           </div>
+            <div *ngIf="showTitle">
+              <span class="fa fa-search"></span>
+              <input type="text" placeholder="Search By Title" [(ngModel)]='Title' list="Title" id="title" >
+              <datalist id="Title">
+                  <div *ngFor="let list of lists">
+                      <option value="{{list.TITLE}}">
+                  </div>                      
+              </datalist> 
+         </div>
 
-            <div *ngIf="showLang">
-                <input type="text" class="fa fa-search"  placeholder="Search By Lang" [(ngModel)]='Language'  list="Language" id="language" >
-                <datalist id="Language">
-                    <div *ngFor="let list of lists">
-                        <option value="{{list.LANG}}">
-                    </div>
-                </datalist>
-            </div>
-           
-            <div *ngIf="showGenre">
-                <input type="text" class="fa fa-search" placeholder="Search By Genre" [(ngModel)]='Genre'  list="Genre" id="genre" >
-                <datalist id="Genre">
-                     <div *ngFor="let list of lists">
-                        <option value="{{list.GENERE}}">
-                    </div>
-            </datalist>   
-            </div>
-        
-        </div>
+          <div *ngIf="showLang">
+              <span class="fa fa-search" ></span>
+              <input type="text" placeholder="Search By Lang" [(ngModel)]='Language'  list="Language" id="language" >
+              <datalist id="Language">
+                  <div *ngFor="let list of lists">
+                      <option value="{{list.LANG}}">
+                  </div>
+              </datalist>
+          </div>
+         
+          <div *ngIf="showGenre">
+              <span class="fa fa-search"></span>
+              <input type="text" placeholder="Search By Genre" [(ngModel)]='Genre'  list="Genre" id="genre" >
+              <datalist id="Genre">
+                   <div *ngFor="let list of lists">
+                      <option value="{{list.GENERE}}">
+                  </div>
+          </datalist>   
+          </div>
+      
+      </div>
 
 
           <div class="container"  >     
@@ -69,6 +71,7 @@
                     <br>
                     <i style="font-size: small;">By: {{list.AUTHOR}},{{list.PUBLISHER}} ({{list.LANG}})</i>
                     <br>
+                    <i style="font-size: small;"><b>Book ID : {{list.ID}}</b></i>
                     <br>
                     <i>Rack no. : <input #rn type="number" value="{{list.RACK_NO}}" name="Rack_no"  style="width:50px; border: none;" ></i>
                     <button  class="btn btn-primary" (click)="updateBook(list.ID,rn.value)" style="float:right;">Update Rack</button>

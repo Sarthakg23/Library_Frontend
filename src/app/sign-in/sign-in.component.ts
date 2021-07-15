@@ -36,6 +36,9 @@ export class SignInComponent implements OnInit {
       {
         this.router.navigate(['/view-books-user']);
       }
+      },
+      error=>{
+        alert("Invalid Email or Password");
       })
   }
 
